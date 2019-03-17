@@ -1,0 +1,99 @@
+﻿@model Weixin.UnitTest.OutDtos.WxUserInfo
+@{
+    Layout = null;
+}
+@*<link href="~/Plugins/WeUIdist/style/weui.min.css" rel="stylesheet" />*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>微网站demopage</title>
+    <link href="https://res.wx.qq.com/open/libs/weui/1.1.3/weui.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            background-color: #efeff4
+        }
+
+        .weui_avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 4px;
+            vertical-align: middle;
+        }
+
+        .rowimg {
+            width: 20px;
+            margin-right: 5px;
+            display: block
+        }
+    </style>
+</head>
+<body>
+    @*<div> @Model.Headimgurl </div>
+        <div> @Model.Nickname </div>
+        <div> @Model.Sex </div>
+        <div> @Model.Country </div>
+        <div> @Model.Province </div>
+        <div> @Model.City </div>
+        <div> @Model.Openid </div>
+        <div> @Model.Privilege </div>
+        <div> @Model.Unionid </div>*@
+    <div class="page">
+        <div class="page__bd">
+            <div class="weui-cells">
+                <a class="weui-cell weui-cell_access" href="http://www.baidu.com">
+                    <div class="weui-cell__bd">
+                        <img class="weui_avatar" src="@Model.Headimgurl" alt="">
+                    </div>
+                    <div class="weui-cell__ft">
+                        <p>@Model.Nickname</p>
+                    </div>
+                </a>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        <img src="~/Content/Images/身份证.png" alt="" class="rowimg">
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p>姓名</p>
+                    </div>
+                    <div class="weui-cell__ft">疾风剑豪</div>
+                </div>
+                <div class="weui-cell">
+                    <img src="~/Content/Images/性别.png" alt="" class="rowimg">
+                    <div class="weui-cell__bd">
+                        <p>性别</p>
+                    </div>
+                    <div class="weui-cell__ft">@Model.Sex</div>
+                </div>
+            </div>
+            <div class="weui-cells__title">重要信息</div>
+            <div class="weui-cells">
+                <a class="weui-cell weui-cell_access" href="~/Weixin/Home">
+                    <img src="~/Content/Images/余额.png" alt="" class="rowimg">
+                    <div class="weui-cell__bd">
+                        <p>余额</p>
+                    </div>
+                    <div class="weui-cell__ft">8888888</div>
+                </a>
+                <div class="weui-cell">
+                    <img src="~/Content/Images/收货地址.png" alt="" class="rowimg">
+                    <div class="weui-cell__bd">
+                        <p>收货地址</p>
+                    </div>
+                    <div class="weui-cell__ft">四川省成都市双流***</div>
+                </div>
+                <div class="weui-cell">
+                    <img src="~/Content/Images/联系电话.png" alt="" class="rowimg">
+                    <div class="weui-cell__bd">
+                        <p>联系电话</p>
+                    </div>
+                    <div class="weui-cell__ft">18382046629</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
